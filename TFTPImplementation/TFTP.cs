@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text;
 
-namespace TFTPImplementation
+namespace TFTPLibrary
 {
-    class TFTP
+    public class TFTP
     {
         // The TFTP Protocol has 5 opcodes in the standard
         public static ushort OP_RRQ = 1; // Read Request

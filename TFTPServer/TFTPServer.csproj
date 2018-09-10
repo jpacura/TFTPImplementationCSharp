@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D5735BE-5078-4696-B86A-EDC497164C21}</ProjectGuid>
+    <ProjectGuid>{A8464C8F-B2F6-469B-8268-566C19F65B75}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TFTPImplementation</RootNamespace>
-    <AssemblyName>TFTPImplementation</AssemblyName>
+    <RootNamespace>TFTPServer</RootNamespace>
+    <AssemblyName>TFTPServer</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,11 +44,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TFTP.cs" />
     <Compile Include="TFTPServer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TFTPImplementation\TFTP.csproj">
+      <Project>{8d5735be-5078-4696-b86a-edc497164c21}</Project>
+      <Name>TFTP</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
